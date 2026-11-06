@@ -4,10 +4,12 @@
 
 <!-- 난이도 확인: 2026-10-07. BOJ: https://github.com/Hiyabye/solvedac/tree/main/data 의 solved.ac 수집 기록. 티어 기준: https://help.solved.ac/en/problem/level . 원본 아이콘: https://d2gd6pc034wcta.cloudfront.net/tier/{level}.svg (저작권 solved.ac). SWEA: 공식 Problem/User Problem 검색 목록. D 배지는 자체 제작이며 —는 난이도 미확인 또는 등급 없음. -->
 
-## Java (93문제)
+## Java (95문제)
 
 | 난이도 | 제목 | 푼 날짜 | 알고리즘 |
 | :---: | --- | --- | --- |
+| ![D3](assets/difficulty/swea-d3.svg) | [SWEA 2814. 최장 경로](Java/swea/2814_%EC%B5%9C%EC%9E%A5%20%EA%B2%BD%EB%A1%9C/Solution.java) | 2026-11-06 | DFS, 백트래킹 |
+| ![D5](assets/difficulty/swea-d5.svg) | [SWEA 7793. 오! 나의 여신님](Java/swea/7793_%EC%98%A4%21%20%EB%82%98%EC%9D%98%20%EC%97%AC%EC%8B%A0%EB%8B%98/Solution.java) | 2026-11-06 | BFS, 최단 경로 |
 | ![D4](assets/difficulty/swea-d4.svg) | [SWEA 1861. 정사각형 방](Java/swea/1861_%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95%20%EB%B0%A9/Solution.java) | 2026-11-04 | DFS, 완전 탐색 |
 | ![D4](assets/difficulty/swea-d4.svg) | [SWEA 14695. 거미](Java/swea/14695_%EA%B1%B0%EB%AF%B8/Solution.java) | 2026-10-22 | 기하, 벡터, 외적, 내적 |
 | ![D5](assets/difficulty/swea-d5.svg) | [SWEA 24528. 유클리드 호제법](Java/swea/24528_%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C%20%ED%98%B8%EC%A0%9C%EB%B2%95/Solution.java) | 2026-10-22 | 수학, 정수론, 구성적 알고리즘 |
