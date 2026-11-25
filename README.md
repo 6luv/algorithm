@@ -1,72 +1,17 @@
 # 알고리즘 문제 풀이
 
-BOJ, SWEA, CodeUp 문제를 Java, Python, Go, C로 풀이한 학습 저장소입니다. 아래의 기존 문제 목록과 난이도 자료는 유지하며, 최근 구현과 작업 상태를 별도로 정리합니다.
-
-## 구성 및 주요 알고리즘
-
-| 경로 | 내용 |
-| --- | --- |
-| `Java/boj/` | BOJ 풀이. 최근 최단 경로 구현과 기존 문자열·정렬·탐색 문제 |
-| `Java/swea/` | SWEA 풀이. DFS/BFS, 백트래킹, DP, 시뮬레이션, 최소 스패닝 트리, 문자열·수학 |
-| `Python/`, `Go/` | BOJ 중심의 언어별 독립 풀이 |
-| `C/` | BOJ·CodeUp 풀이와 Visual Studio 프로젝트 |
-| `assets/` | 문제 난이도 배지 및 통계 이미지 |
-
-## 최근 변경사항
-
-### 커밋에 반영된 구현
-
-| 커밋 | 변경 내용 |
-| --- | --- |
-| `01e8656` (2026-11-24) | [BOJ 1753 최단경로](Java/boj/1753_최단경로/Main.java): 인접 리스트와 우선순위 큐를 사용하는 다익스트라. 도달 불가능한 정점은 `INF` 출력. 루트 `1753.py`는 빈 파일 |
-| `4ed1fa7` (2026-11-06) | SWEA 2814 최장 경로(DFS·백트래킹), 7793 오! 나의 여신님(BFS) 추가 |
-| `6a68999` (2026-11-04) | SWEA 1861 정사각형 방(DFS·완전 탐색) 추가 |
-| `35c9f8a` (2026-10-22) | SWEA 14695 거미(벡터 연산), 24528 유클리드 호제법, 5607 조합(모듈러 거듭제곱) 추가 |
-| `65fabf7` (2026-10-19) | SWEA 1494 사랑의 카운슬러(조합), 4038 단어가 등장하는 횟수(KMP), 5643 키 순서(플로이드–워셜) 추가 |
-
-### 자동화
-
-`01e8656`에서 추가한 `.github/workflows/workflow.yml`은 Markdown 변경을 포함한 push 시 실행됩니다. `### 성능 요약`이 없는 Markdown을 찾아 BOJ 성능 정보 갱신 액션을 호출하고, 변경이 있으면 봇이 커밋·푸시하도록 설정되어 있습니다. 저장소의 `GH_TOKEN` 시크릿을 참조합니다. 실행 성공 여부는 별도로 확인하지 않았습니다.
-
-### 로컬 작업 중인 풀이
-
-다음 파일은 문서 정리 시점에 아직 커밋되지 않았습니다. 구현 내용을 분류한 것으로, 정답 판정이나 풀이 완료를 의미하지 않습니다. 기존 언어별 문제 수에는 포함하지 않았습니다.
-
-| 파일 | 현재 구현 |
-| --- | --- |
-| [BOJ 11404 플로이드](Java/boj/11404_플로이드/src/Main.java) | 플로이드–워셜, 중복 간선 최소 비용 선택, 도달 불가 시 0 출력 |
-| [BOJ 13549 숨바꼭질3](Java/boj/13549_숨바꼭질3/Main.java) | 덱을 사용하는 0-1 BFS, 순간이동은 앞에·일반 이동은 뒤에 삽입 |
-| [BOJ 1956 운동](Java/boj/1956_운동/src/Main.java) | 플로이드–워셜과 왕복 거리 합으로 최소 사이클 탐색 |
-
-기존 문제 표는 이전 정리 기준이며, 최신 전체 풀이 수를 나타내지는 않습니다.
-
-## 실행 방법
-
-각 문제는 독립 프로그램입니다. 같은 이름의 `Main` 또는 `Solution` 클래스가 있으므로 저장소 전체를 한 번에 컴파일하지 않고 문제별로 실행합니다.
-
-```sh
-cd Java/boj/1753_최단경로
-javac -encoding UTF-8 Main.java
-java Main
-```
-
-표준 입력으로 문제 입력을 전달합니다. `package com.company`가 있는 예전 Java 풀이는 `src`에서 컴파일하고 `java com.company.Main`으로 실행합니다. 일부 SWEA 테스트 코드는 로컬 샘플 입력 경로를 사용하므로 해당 코드와 `res/`를 확인합니다. Python은 `python 파일.py`, Go는 `go run 파일.go`로 개별 실행하며, C는 컴파일러 또는 포함된 Visual Studio 프로젝트를 사용합니다.
-
-## 저장소 관리
-
-`.iml`, `.run/`, IDE 개인 설정·캐시, 컴파일 결과, 로컬 환경·키 파일은 `.gitignore`로 제외합니다. Visual Studio의 `.sln`, `.vcxproj`, `.vcxproj.filters`, GitHub Actions, 샘플 입력과 문서 이미지는 보존합니다. 환경 설정 예시는 `.env.example` 또는 `.env.sample`로 공유합니다.
-
-## 기존 문제 목록
-
-
 <!-- 푼 날짜: 코드의 작성일 주석을 우선 사용하고, 없으면 파일의 최초 추가 커밋 날짜를 사용함. 실제 정답 제출일은 별도 확인하지 않음. -->
 
 <!-- 난이도 확인: 2026-10-07. BOJ: https://github.com/Hiyabye/solvedac/tree/main/data 의 solved.ac 수집 기록. 티어 기준: https://help.solved.ac/en/problem/level . 원본 아이콘: https://d2gd6pc034wcta.cloudfront.net/tier/{level}.svg (저작권 solved.ac). SWEA: 공식 Problem/User Problem 검색 목록. D 배지는 자체 제작이며 —는 난이도 미확인 또는 등급 없음. -->
 
-## Java (95문제)
+## Java (99문제)
 
 | 난이도 | 제목 | 푼 날짜 | 알고리즘 |
 | :---: | --- | --- | --- |
+| — | [BOJ 1956. 운동](Java/boj/1956_%EC%9A%B4%EB%8F%99/src/Main.java) | 2026-11-25 | 플로이드–워셜, 최단 사이클 |
+| — | [BOJ 13549. 숨바꼭질3](Java/boj/13549_%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%883/Main.java) | 2026-11-25 | 0-1 BFS, 덱 |
+| — | [BOJ 11404. 플로이드](Java/boj/11404_%ED%94%8C%EB%A1%9C%EC%9D%B4%EB%93%9C/src/Main.java) | 2026-11-25 | 플로이드–워셜 |
+| — | [BOJ 1753. 최단경로](Java/boj/1753_%EC%B5%9C%EB%8B%A8%EA%B2%BD%EB%A1%9C/Main.java) | 2026-11-24 | 다익스트라, 우선순위 큐 |
 | ![D3](assets/difficulty/swea-d3.svg) | [SWEA 2814. 최장 경로](Java/swea/2814_%EC%B5%9C%EC%9E%A5%20%EA%B2%BD%EB%A1%9C/Solution.java) | 2026-11-06 | DFS, 백트래킹 |
 | ![D5](assets/difficulty/swea-d5.svg) | [SWEA 7793. 오! 나의 여신님](Java/swea/7793_%EC%98%A4%21%20%EB%82%98%EC%9D%98%20%EC%97%AC%EC%8B%A0%EB%8B%98/Solution.java) | 2026-11-06 | BFS, 최단 경로 |
 | ![D4](assets/difficulty/swea-d4.svg) | [SWEA 1861. 정사각형 방](Java/swea/1861_%EC%A0%95%EC%82%AC%EA%B0%81%ED%98%95%20%EB%B0%A9/Solution.java) | 2026-11-04 | DFS, 완전 탐색 |
